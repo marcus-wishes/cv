@@ -1,0 +1,273 @@
+/*@import url("https://fonts.googleapis.com/css2?family=Anton&family=Lato:wght@300&family=Yanone+Kaffeesatz:wght@500&display=swap");*/
+@import url("./fonts.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { 
+	--accent-color: #db2777;
+	--desk-color: #4B5563;
+	--details-background: #d1d5db;
+	--border-color: #f3f4f6;
+}
+
+@page {
+	size: A4;
+	margin: 0.5rem 1.5rem;
+}
+
+html { 
+	@apply scroll-smooth subpixel-antialiased;
+}
+
+#columnsContainer {
+	@apply grid;
+	grid-template-columns: auto;
+	grid-auto-flow: row reverse;
+
+}
+
+@media print {
+	#columnsContainer {
+		grid-template-columns: auto auto;
+	}
+}
+
+@media (min-width: 1024px) { /* lg */
+	#columnsContainer {
+		grid-template-columns: auto auto;
+	}
+}
+
+/* Fonts */
+.yanone {
+	font-family: "Yanone Kaffeesatz";
+}
+
+.anton {
+	font-family: "Anton";
+}
+
+.lato {
+	font-family: "Lato";
+}
+
+.bench {
+	font-family: "BenchNine";
+}
+
+body {
+	font-family: "Lato";
+	@apply grid;
+}
+
+@media (min-width: 768px) { /* md */
+	body {
+		grid-template-columns: 0.5fr 10fr 0.5fr;
+	}
+}
+
+@media (min-width: 1024px) { /* lg */
+	body {
+		grid-template-columns: 1fr 10fr 1fr;
+	}
+}
+
+@media (min-width: 1280px) { /* xl */
+	body {
+		grid-template-columns: 2fr 10fr 2fr;
+	}
+}
+
+@media (min-width: 1536px) { /* 2xl */
+	body {
+		grid-template-columns: 2.5fr 10fr 2.5fr;
+	}
+}
+
+.skilllist {
+	@apply border-l pl-1 print:text-sm font-bold;
+	border-color: var(--border-color);
+}
+
+.paperspacer {
+	@apply print:hidden block;
+	background-color: var(--desk-color);
+}
+
+#home {
+	@apply yanone leading-none text-base text-gray-300 print:text-gray-600
+		flex justify-end items-stretch
+		print:bg-white
+		py-2 px-4
+		md:pt-16 print:pt-8;
+	font-family: "Yanone Kaffeesatz";
+	background-color: var(--desk-color);
+}
+
+footer {
+	font-family: "Yanone Kaffeesatz";
+	@apply text-right text-gray-400 print:hidden;
+	background-color: var(--desk-color);
+}
+
+#introduction {
+	@apply mt-6
+		rounded-xl border-4
+		text-justify
+		p-8 print:p-4 print:leading-6 print:font-bold print:w-2/3
+		mx-auto w-full xl:w-5/6;
+	font-family: "Yanone Kaffeesatz";
+	border-color: var(--accent-color);
+	background-color: var(--details-background);
+}
+
+h1 {
+	@apply text-3xl my-6 print:my-3 underline print:text-gray-500 print:text-2xl
+	text-center pb-6 lg:pt-8 pt-4 print:pb-8 print:pt-8;
+	font-family: "Anton";
+	color: var(--accent-color);
+}
+
+h2 {
+	@apply text-xl border-b font-bold;
+	font-family: "Yanone Kaffeesatz";
+	border-color: var(--accent-color);
+}
+
+h3 {
+	@apply text-lg font-bold;
+	font-family: "Yanone Kaffeesatz";
+}
+
+hr {
+	@apply border-gray-300 mt-8 w-6/12 -skew-y-0;
+}
+
+details {
+	@apply flex rounded-lg pb-0;
+	background-color: var(--details-background);
+}
+
+summary {
+	@apply pl-8 pr-4 -indent-5 cursor-pointer py-2;
+}
+
+details div {
+	@apply text-sm text-justify px-8 -mt-2 pt-1 lg:px-10 xl:px-12 2xl:px-16 pb-2;
+	font-family: "Lato";
+	border-color: var(--border-color);
+}
+
+.projectsummary {
+	@apply pb-2 font-bold text-sm border-t pl-2 pt-1 border-l;
+	border-color: var(--accent-color);
+}
+
+.projecttext {
+	@apply border-l pl-2;
+	border-color: var(--accent-color);
+}
+
+dt {
+	@apply font-bold text-xs inline-block mr-2;
+}
+
+dd {
+	@apply inline-block text-xs font-bold mr-8;
+}
+
+#education div p {
+	@apply border-b;
+	border-color: var(--accent-color);
+}
+
+.workgrid {
+	@apply grid;
+	grid-template-columns: auto auto auto;
+}
+
+.worktime,
+.workcompany {
+	font-family: "Lato";
+	@apply leading-6 border-b;
+	border-color: var(--accent-color);
+}
+
+.worktime {
+	@apply pr-2;
+}
+
+.worktitle {
+	@apply font-bold;
+}
+
+
+.workdescr {
+	@apply text-sm col-span-3 text-justify pt-1 pb-1;
+}
+
+.workprojdescr {
+	@apply col-span-3;
+}
+
+#interests ul {
+	@apply list-inside pl-4 mb-4 font-bold;
+	list-style-type: "\2713";
+}
+
+.skillsgrid {
+	@apply grid-cols-1;
+}
+
+
+.pagebreak {
+	@apply hidden relative;
+}
+
+.pagefooter {
+	@apply hidden print:flex absolute text-sm px-20 justify-between left-0 w-screen text-gray-300;
+}
+
+@media print {
+	.pagebreak {
+		break-before: always;
+		@apply block clear-both text-right pb-12 text-sm text-gray-500;
+	}
+}
+
+
+/* Section Menu */
+#sectionmenu {
+	@apply print:hidden fixed bottom-0 grid grid-cols-2 justify-evenly w-full z-10 flex-col md:flex-row
+		border-t-4
+		md:border-b-4 md:border-t-0 md:grid-cols-6;
+		border-color: var(--accent-color);
+}
+
+@media (min-width: 768px) { /* md */
+	#sectionmenu {
+		bottom: unset;
+		@apply top-0;
+	}
+}
+
+#sectionmenu a {
+	@apply text-xs md:text-sm text-center font-extrabold text-white hover:text-gray-600 focus:text-gray-600
+		hover:bg-white focus:bg-white 
+		flex-auto bg-gray-600 p-2 md:p-2
+		border-b border-gray-500
+		md:border-b-0
+		border-l border-r md:border-l-0 md:border-r-0;
+	font-family: "Lato";
+	/*font-family: "Saira Extra Condensed";*/
+}
+
+
+/* Tips Modal */
+#tipsmodal {
+	@apply fixed z-20 top-0 left-0 bottom-0 right-0 w-full h-full
+		bg-gray-700 bg-opacity-95
+		text-white;
+}
