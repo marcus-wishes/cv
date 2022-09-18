@@ -6,7 +6,7 @@ const config: UserConfig = {
 		outDir: "./docs/",
 		assetsDir: "",
 	},
-	base: "/simplecv/",
+	base: "/cv/",
 	
 };
 

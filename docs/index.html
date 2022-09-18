@@ -13,7 +13,7 @@
 			integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY="
 			crossorigin="anonymous"
 		/>
-		<link rel="stylesheet" href="/simplecv/index.df156091.css">
+		<link rel="stylesheet" href="/cv/index.39936a71.css">
 	</head>
 	<body>
 
@@ -27,7 +27,7 @@
 			<a href="#interests">Interests</a>
 		</nav>
 
-		<dialog id="tipsmodal">
+		<!--dialog id="tipsmodal">
 			<div class="grid h-full justify-center items-center">			
 				<div class="pr-16 pl-12 pb-16 mt-16 max-w-md">
 					<p class="whitespace-nowrap font-bold text-lg"><span class="fa fa-info-circle"></span>&nbsp;&nbsp;Print styling is available.</p>
@@ -43,7 +43,7 @@
 					</div>
 				</div>
 			</div>
-		</dialog>
+		</!--dialog-->
 
 		<!-- those are the page footers only visible in print -->
 		<div class="pagefooter top-[283mm]">
@@ -122,7 +122,7 @@
 				</div>
 
 				<div id="columnsContainer" class="px-4 lg:px-6 2xl:px-8">
-						<section id="workexperience" class="pr-0 print:pr-4 lg:pr-4">
+						<section id="workexperience" class="pr-0 print:pr-4 lg:pr-4 row-span-2">
 							<h1>Work Experience</h1>
 							<div class="workgrid">
 								<h2 class="worktitle">Research Engineer</h2>
@@ -242,108 +242,110 @@
 								</span>
 							</div>
 
+							<div class="flex justify-center print:hidden lg:hidden">
+								<hr />
+							</div>
+
 						</section>
 
-						<div id="skillEducation" class="flex flex-col pr-0 -order-1 lg:order-1 print:order-1">
-					
-							<section id="skills">
-								<h1>Skills</h1>
-								<!--div class="grid gap-6 print:block sm:grid sm:grid-cols-2 lg:block"-->
-								<div class="grid print:block print:grid-cols-1">
-									<div class="pb-4">
-										<h2>Programming Languages</h2>
-										<ul class="skilllist">
-											<li>(+) JavaScript</li>
-											<li>(+) TypeScript</li>
-											<li>(+) Go</li>
-											<li>(~) Java</li>
-											<li>(-) C++</li>
-										</ul>
-									</div>
-			
-									
-									<div class="pb-4">
-										<h2>Computer Graphics</h2>
-										<ul class="skilllist">
-											<li>(~) OpenGL</li>
-											<li>(~) Volume Rendering</li>
-											<li>(~) ThreeJs</li>
-										</ul>
-									</div>
-
-									<div class="pb-4">
-										<h2>Data Visualization</h2>
-										<ul class="skilllist">
-											<li>(+) Plotly</li>
-											<li>(-) D3</li>
-										</ul>
-									</div>
-			
-									
-									<div>
-										<h2>Web Development</h2>
-										<ul class="skilllist">
-											<li>(+) Html</li>
-											<li>(+) CSS</li>
-											<li>(+) React / NextJS</li>
-											<li>(~) Svelte(Kit)</li>
-											<li>(+) Vite / WebPack</li>
-											<li>(+) Tailwind</li>
-										</ul>
-									</div>
-			
-									<div class="flex col-span-2 lg:col-span-1 justify-center mt-6 print:mb-6">
-										<dl class="flex flex-col leading-4 justify-center lato">
-											<div><dt>(+):</dt><dd>good / current experience</dd></div>
-											<div><dt>(~):</dt><dd>some experience</dd></div>
-											<div><dt>(-):</dt><dd>little experience / long time ago</dd></div>
-										</dl>
-									</div>
+						<section id="skills" class="-order-1 print:order-1 lg:order-1">
+							<h1>Skills</h1>
+							<!--div class="grid gap-6 print:block sm:grid sm:grid-cols-2 lg:block"-->
+							<div class="grid print:block print:grid-cols-1">
+								<div class="pb-4">
+									<h2>Programming Languages</h2>
+									<ul class="skilllist">
+										<li>(+) JavaScript</li>
+										<li>(+) TypeScript</li>
+										<li>(+) Go</li>
+										<li>(~) Java</li>
+										<li>(-) C++</li>
+									</ul>
 								</div>
-							</section>
+		
+								
+								<div class="pb-4">
+									<h2>Computer Graphics</h2>
+									<ul class="skilllist">
+										<li>(~) OpenGL</li>
+										<li>(~) Volume Rendering</li>
+										<li>(~) ThreeJs</li>
+									</ul>
+								</div>
 
-							<div class="flex justify-center print:hidden 2xl:hidden">
+								<div class="pb-4 row-span-2">
+									<h2>Web Development</h2>
+									<ul class="skilllist">
+										<li>(+) Html</li>
+										<li>(+) CSS</li>
+										<li>(+) React / NextJS</li>
+										<li>(~) Svelte(Kit)</li>
+										<li>(+) Vite / WebPack</li>
+										<li>(+) Tailwind</li>
+									</ul>
+								</div>
+
+								<div class="pb-4">
+									<h2>Data Visualization</h2>
+									<ul class="skilllist">
+										<li>(+) Plotly</li>
+										<li>(-) D3</li>
+									</ul>
+								</div>
+
+								<div>
+									<h2>Dev Ops</h2>
+									<ul class="skilllist">
+										<li>(+) Linux</li>
+										<li>(~) Docker</li>
+									</ul>
+								</div>
+		
+		
+								<div class="flex col-span-2 lg:col-span-1 justify-center mt-6 print:mb-6 print:pt-24">
+									<dl class="flex flex-col leading-4 justify-center lato">
+										<div><dt>(+):</dt><dd>good / current experience</dd></div>
+										<div><dt>(~):</dt><dd>some experience</dd></div>
+										<div><dt>(-):</dt><dd>little experience / long time ago</dd></div>
+									</dl>
+								</div>
+							</div>
+							
+							<div class="flex justify-center">
 								<hr />
 							</div>
+						</section>
 
-							<section id="education" class="flex flex-col">
-								<h1>Education</h1>
-								<!--div class="grid gap-6 grid-cols-1 sm:grid-cols-2 print:grid-cols-1 lg:grid-cols-1"-->
-								<div class="grid print:block print:grid-cols-1 grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
-									<div class="print:pb-6">
-										<h2 class="border-b">Visual Computing (MSc)</h2>
-										<p class="ml-6 border-b print:text-sm">2010 - *</p>
-										<p class="ml-12 border-b print:text-sm">Vienna University of Technology</p>
-									</div>
-									<div class="print:pb-6">
-										<h2 class="border-b">Visualization Group</h2>
-										<p class="ml-6 border-b print:text-sm">2014 - 2015</p>
-										<p class="ml-12 border-b print:text-sm"> University of Bergen (Erasmus)</p>
-									</div>
-									<div class="print:pb-6">
-										<h2 class="border-b">Media Informatics (BSc)</h2>
-										<p class="ml-6 border-b print:text-sm">2005 - 2009</p>
-										<p class="ml-12 border-b print:text-sm">Vienna University of Technology</p>
-									</div>
-									<div class="print:pb-6">
-										<h2 class="border-b"> Machine Engineering</h2>
-										<p class="ml-6 border-b print:text-sm">1999 - 2004</p>
-										<p class="ml-12 border-b print:text-sm">Technical College</p>
-									</div>
-									<div class="hidden lg:block xl:hidden print:block">
-										<h2 class="border-b">Athletics / Gymnastics</h2>
-										<p class="ml-6 border-b print:text-sm">1995 - 1999</p>
-										<p class="ml-12 border-b print:text-sm">Sports Gymnasium</p>
-									</div>
+
+						<section id="education" class="flex flex-col print:order-1 lg:order-1">
+							<h1>Education</h1>
+							<!--div class="grid gap-6 grid-cols-1 sm:grid-cols-2 print:grid-cols-1 lg:grid-cols-1"-->
+							<div class="grid print:block print:grid-cols-1 grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
+								<div class="print:pb-6">
+									<h2 class="border-b">Visual Computing</h2>
+									<p class="ml-12 border-b print:text-sm">Vienna University of Technology</p>
 								</div>
-							</section>
-
-							<div class="flex lg:hidden justify-center print:hidden">
-								<hr />
+								<div class="print:pb-6">
+									<h2 class="border-b">Visualization Group (Erasmus - 1 Year)</h2>
+									<p class="ml-12 border-b print:text-sm"> University of Bergen (Erasmus)</p>
+								</div>
+								<div class="print:pb-6">
+									<h2 class="border-b">Media Informatics (BSc)</h2>
+									<p class="ml-12 border-b print:text-sm">Vienna University of Technology</p>
+								</div>
+								<div class="print:pb-6">
+									<h2 class="border-b"> Machine Engineering</h2>
+									<p class="ml-12 border-b print:text-sm">Technical College</p>
+								</div>
+								<div class="hidden lg:block xl:hidden print:block">
+									<h2 class="border-b">Athletics / Gymnastics</h2>
+									<p class="ml-12 border-b print:text-sm">Sports Gymnasium</p>
+								</div>
 							</div>
-						</div>
+							
+						</section>
+					</div>
 
-				</div>
 
 
 

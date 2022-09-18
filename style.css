@@ -24,8 +24,6 @@ html {
 #columnsContainer {
 	@apply grid;
 	grid-template-columns: auto;
-	grid-auto-flow: row reverse;
-
 }
 
 @media print {
