@@ -34,6 +34,7 @@
 					<p>This CV is powered by HTML5, Tailwind, Vite, Github Pages and absolute minimal JavaScript.</p>
 					<div class="flex justify-end mt-4">
 						<button 
+							id="tipsmodal_btn"
 							class="text-lg border-4 bg-gray-700 border-white px-4 py-1 hover:bg-gray-400" 
 							onclick="document.getElementById('tipsmodal').close();"
 						>
@@ -145,7 +146,7 @@
 											<p class="projecttext">
 												I work on converting
 												the frontend from <span class="techstack">JavaScript</span> to
-												<span class="techstack">Typescript</span> and  <span class="techstack">React</span>
+												<span class="techstack">TypeScript</span> and  <span class="techstack">React</span>
 												class components to functional components. We improved
 												upon the <span class="techstack">ThreeJS</span> 3D volume rendering, as well as on the 3D query
 												spatial query possibilities. The
@@ -175,11 +176,12 @@
 											</p>
 											
 											<div class="projecttext">
-												I developed on the frontend using <span class="techstack">React</span>, <span class="techstack">Tailwind</span> with <span class="techstack">Flow</span> types, and
-												<span class="techstack">Redux</span> state management to improve rendering, user interaction,
-												and handling of large datasets, and I created a unique
-												workflow to explore gene expression data as a plugin component
-												for BrainTrawler, and further developed the <span class="techstack">Storybook</span> based
+												I developed on the frontend using <span class="techstack">React</span> with <span class="techstack">Flow</span> types, and
+												<span class="techstack">Redux</span> state management.
+												To improve rendering, user interaction, and handling of large datasets, and I created a unique
+												workflow to explore gene expression data as a npm packaged component using <span class="techstack">Tailwind</span>, <span class="techstack">TypeScript</span> and 
+												<span class="techstack">Vite</span>.
+												I also further developed the <span class="techstack">Storybook</span>-based
 												component libraries and <span class="techstack">Plotly</span>-based visualizations.
 											</div>
 											<div class="projecttext print:mt-24 print:pt-12">
@@ -218,7 +220,7 @@
 												<br />
 												<br />
 												My work also involved development of a desktop tool tracking the registration progress and preview of confocal microscopy images 
-												in an SQLite database using <span class="techstack">C++11</span> and <span class="techstack">Qt5</span>.	
+												in an SQLite database using <span class="techstack">C++11</span> and <span class="techstack">Qt5</span>, and <span class="techstack">qmake</span>.	
 											</p>
 									</details>
 								</div>
@@ -375,7 +377,7 @@
 
 				<div class="pagebreak"></div>
 				
-				<div class="relative 2xl:-top-8 print:mt-36">
+				<div class="relative 2xl:-top-8 print:mt-12">
 					<div class="flex justify-center mt-0">
 						<hr />
 					</div>
@@ -426,53 +428,82 @@
 
 					<section id="ownprojects" class="-order-1 print:order-1 lg:order-1">
 						<h1>Private Projects</h1>
-						<div class="mb-6">
-							<details open>
-								<summary class="yanone">
-									<h2 class="inline-block pl-6 border-b-0"><a href="https://ylink.at">ylink.at</a></h2>
-								</summary>
-								<div>
-									<p class="projecttext border-t">
-										A privacy aware short link service having an API first approach,
-										and offering different link expiration options, as well as link
-										encryption and password protection.<br />
-										A companion npm package offers easy API integration into projects.
-									</p>
-								</div>
-							</details>
-						</div>
-						<div class="mb-6">
-							<details open>
-								<summary class="yanone text-base">
-									<h2 class="inline-block pl-6 border-b-0">
-										<a href="https://austrian-kiz.ylink.at/">
-											austrian-kiz.ylink.at
-										</a>
-									</h2>
-								</summary>
-								<div>
-									
-									<p class="projecttext border-t">
-										A simple calendar tool showing the upcoming events in the Austrian
-										latin dance scene, as a help for organizers to find free event dates without
-										having to already publish an Facebook event.
-									</p>
-								</div>
-							</details>
-						</div>
-						<div>
-							<details open>
-								<summary class="yanone">
-									<h2 class="inline-block pl-6 border-b-0">Teamo</h2>
-								</summary>
-								<div>
-									<p class="projecttext border-t">
-										A web application for team management. The tool allows one to create teams out of a pool of
-										people, to keep track of the team members' availability, and their deployments to different events. 
-									</p>
-								</div>
-							</details>
-						</div>
+						
+						<details open class="mb-6">
+							<summary class="yanone">
+								<h2 class="inline-block pl-6 border-b-0"><a href="https://ylink.at">ylink.at</a></h2>
+							</summary>
+							<div>
+								<p class="projectsummary">
+									A privacy aware short link service having an API first approach,
+									and offering different link expiration options, as well as link
+									encryption and password protection.
+								</p>
+								<p class="projecttext">
+									Build with <span class="techstack">NextJS</span>, Tailwind, <span class="techstack">TRPC</span>, and a REST-API written in TypeScript.
+									As database I use a <span class="techstack">MySQL</span> database running on a DBaaS provider.
+									A first draft was done in <span class="techstack">SvelteKit</span> and offered Stripe integration.
+									<br />
+									A companion npm package offers easy API integration into projects.
+								</p>
+							</div>
+						</details>
+						
+						<details open class="mb-6">
+							<summary class="yanone text-base">
+								<h2 class="inline-block pl-6 border-b-0">
+									<a href="https://austrian-kiz.ylink.at/">
+										austrian-kiz.ylink.at
+									</a>
+								</h2>
+							</summary>
+							<div>
+								<p class="projectsummary">
+									A simple calendar tool showing the upcoming events in the Austrian
+									latin dance scene, as a help for organizers to find free event dates without
+									having to already publish an Facebook event.
+								</p>
+								<p class="projecttext">
+									A project also made with NextJS, and uses the Google Calendar API to interact with a Google calendar.
+								</p>
+							</div>
+						</details>
+						
+						<details open class="mb-6">
+							<summary class="yanone">
+								<h2 class="inline-block pl-6 border-b-0">Teamo</h2>
+							</summary>
+							<div>
+								<p class="projectsummary">
+									A web application for team management. The tool allows one to create teams out of a pool of
+									people, to keep track of the team members' availability, and their deployments to different events. 
+								</p>
+								<p class="projecttext">
+									Also this project is using TypeScript, NextJS, TRPC, and MySQL on a DBaaS provider. 
+								</p>
+							</div>
+						</details>
+						
+						<details open>
+							<summary class="yanone">
+								<h2 class="inline-block pl-6 border-b-0">Others</h2>
+							</summary>
+							<div>
+								<p class="projectsummary">
+									2015 - Simple Template Engine
+								</p>
+								<p class="projecttext">
+									A simple template engine written in C++11.
+								</p>
+								<p class="projectsummary">
+									2014 - QSSEngine
+								</p>
+								<p class="projecttext">
+									A prototype OpenGL game engine using Qt5 for the context and input, FBX model loading, and implementing basic effects like bump mapping, shadow mapping, a sky box, a GPU particle system, HDR rendering, tone mapping, and depth of field.
+								</p>
+							</div>
+						</details>
+						
 
 						<div class="flex lg:hidden print:hidden justify-center">
 							<hr />
@@ -493,5 +524,14 @@
 	<script defer>
 		// is there is JS disabled, we simply don't show the tips modal
 		document.getElementById("tipsmodal").setAttribute("open", "true");
+		// focus the button of the tips dialog to close it with enter
+		document.getElementById("tipsmodal_btn").focus();
+		// close the tips dialog using Escape
+		document.addEventListener("keyup", function (event) {
+			if (event.key === "Escape") {
+				document.getElementById("tipsmodal").removeAttribute("open");
+			}
+		});
+
 	</script>
 </html>

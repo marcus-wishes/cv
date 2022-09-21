@@ -13,7 +13,7 @@
 			integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY="
 			crossorigin="anonymous"
 		/>
-		<link rel="stylesheet" href="/cv/index.39936a71.css">
+		<link rel="stylesheet" href="/cv/index.524e0ca8.css">
 	</head>
 	<body>
 
@@ -27,7 +27,7 @@
 			<a href="#interests">Interests</a>
 		</nav>
 
-		<dialog id="tipsmodal">
+		<dialog id="tipsmodal" class="print:hidden">
 			<div class="grid h-full justify-center items-center">			
 				<div class="pr-16 pl-12 pb-16 mt-16 max-w-md">
 					<p class="whitespace-nowrap font-bold text-lg"><span class="fa fa-info-circle"></span>&nbsp;&nbsp;Print styling is available.</p>
@@ -35,6 +35,7 @@
 					<p>This CV is powered by HTML5, Tailwind, Vite, Github Pages and absolute minimal JavaScript.</p>
 					<div class="flex justify-end mt-4">
 						<button 
+							id="tipsmodal_btn"
 							class="text-lg border-4 bg-gray-700 border-white px-4 py-1 hover:bg-gray-400" 
 							onclick="document.getElementById('tipsmodal').close();"
 						>
@@ -122,7 +123,7 @@
 				</div>
 
 				<div id="columnsContainer" class="px-4 lg:px-6 2xl:px-8">
-						<section id="workexperience" class="pr-0 print:pr-4 lg:pr-4 row-span-2">
+						<section id="workexperience" class="pr-0 print:pr-4 lg:pr-4">
 							<h1>Work Experience</h1>
 							<div class="workgrid">
 								<h2 class="worktitle">Research Engineer</h2>
@@ -144,20 +145,21 @@
 												An extension and continuation of the Larvalbrain project.
 											</p>
 											<p class="projecttext">
-												I worked on an overhaul of the basic architecture, converting
-												the frontend from JavaScript to Typescript and class
-												components to functional component with hooks. We improved
-												upon the 3D volume rendering, as well as on the 3D query
-												spatial query possibilities with heavy performance
-												improvements, and adding more query possibilities. Also the
-												state management got modernized to Redux Toolkit, and we
-												vastly improved the Storybook based in house component
-												libraries, adding several new visualizations using Plotly.
+												I work on converting
+												the frontend from <span class="techstack">JavaScript</span> to
+												<span class="techstack">TypeScript</span> and  <span class="techstack">React</span>
+												class components to functional components. We improved
+												upon the <span class="techstack">ThreeJS</span> 3D volume rendering, as well as on the 3D query
+												spatial query possibilities. The
+												state management was modernized to <span class="techstack">Redux Toolkit</span>, communication with the backend with <span class="techstack">React-Query</span>, and we
+												added several components, new <span class="techstack">Plotly</span> based visualizations, and interactive documentation to the <span class="techstack">Storybook</span> based in-house component
+												libraries.
 												<br />
 												<br />
 												In the backend, I am working on performance and data storage
-												improvements of our custom 3D spatial data store, and the
-												communication between the different micro services.
+												improvements of our custom 3D spatial data store in <span class="techstack">Go</span>, data retrieval using <span class="techstack">SQLC</span> 
+												from a <span class="techstack">PostgreSQL</span>, and the
+												communication between the different <span class="techstack">Docker</span> microservices.
 											</p>
 										</div>
 									</details>
@@ -167,27 +169,28 @@
 											<h3 class="inline-block pl-6">BrainTrawler (March 2018 - February 2022)</h3>
 										</summary>
 										<div>
-											<p class="projectsummary print:mb-24">
+											<p class="projectsummary">
 												A visual analytics framework for neuroscientists to
 												iteratively explore heterogeneous big brain data, neural
-												circuit connectivity data and (single cell) gene expression
+												circuit connectivity data, and (single cell) gene expression
 												data.
 											</p>
 											
-											<p class="projecttext">
-												I developed on the frontend using React with Flow types and
-												Redux state management to improve rendering, user interaction
-												and handling of large datasets, and I created a unique
-												workflow to explore gene expression data as a plugin component
-												for BrainTrawler, and further developed the Storybook based
-												component libraries.
-												<br />
-												<br />
-												In the backend I again created a custom data store to
-												efficiently map 3D coordinates to single cell sample meta data
+											<div class="projecttext">
+												I developed on the frontend using <span class="techstack">React</span> with <span class="techstack">Flow</span> types, and
+												<span class="techstack">Redux</span> state management.
+												To improve rendering, user interaction, and handling of large datasets, and I created a unique
+												workflow to explore gene expression data as a npm packaged component using <span class="techstack">Tailwind</span>, <span class="techstack">TypeScript</span> and 
+												<span class="techstack">Vite</span>.
+												I also further developed the <span class="techstack">Storybook</span>-based
+												component libraries and <span class="techstack">Plotly</span>-based visualizations.
+											</div>
+											<div class="projecttext print:mt-24 print:pt-12">
+												In the backend I again created a custom data store in <span class="techstack">Go</span> to
+												efficiently map 3D coordinates to single cell sample metadata
 												and gene expression data, including vast filtering and
-												querying possibilities on the sample meta data.
-											</p>
+												querying possibilities on the sample metadata.
+											</div>
 										</div>
 									</details>
 
@@ -202,19 +205,23 @@
 												the Drosophila melanogaster larvae.
 											</p>
 											<p class="projecttext">
+												I worked with <span class="techstack">JavaScript</span> and <span class="techstack">React</span> on the frontend, including 
+												<span class="techstack">ThreeJS</span> volume and canvas slice rendering of microscopy images, on the
+												spatial querying methods for the volumetric data, and the communication with the backend. 
 												
-												In the web frontend, I worked with JavaScript and React on the
-												volume and slice rendering of the microscopy images, on the
-												spatial querying methods for the volumetric data, and the
-												communication with the backend. I also established the use of
-												Storybook based component libraries.
+												on a custom spatial data store written in <span class="techstack">Go</span>, and the
+												communication with the Go <span class="techstack">REST-API</span> backend. I also established the use of
+												<span class="techstack">Storybook</span>-based component libraries.
 												<br />
 												<br />
-												The backend was written in Go/Java, and included different
-												services, like a REST API, an image processing service, or a
-												volumetric data mining service. My main focus of work in the
-												backend was a custom data store to efficiently query 3D
-												volumetric data.
+												My work in the backend included the REST-API and a task scheduler and runner in <span class="techstack">Go</span>, 
+												and different microservices, like a GO/<span class="techstack">Java</span> image processing service. My main focus of work in the
+												backend was a custom data store to efficiently  query and data mine 3D
+												volumetric data in Go.
+												<br />
+												<br />
+												My work also involved development of a desktop tool tracking the registration progress and preview of confocal microscopy images 
+												in an SQLite database using <span class="techstack">C++11</span> and <span class="techstack">Qt5</span>, and <span class="techstack">qmake</span>.	
 											</p>
 									</details>
 								</div>
@@ -222,13 +229,37 @@
 								<h2 class="worktitle mt-4 xl:mt-8">Researcher</h2>
 								<span class="worktime mt-4 xl:mt-8">08.2014 - 07.2015</span>
 								<span class="workcompany mt-4 xl:mt-8">University of Bergen</span>
-								<span class="workdescr mb-4">
-									Research stay in Bergen, Norway. Development of a history tracking visualization software using C++,
-									OpenGL, JavaScript and D3.
+								<span class="workdescr">
+									Research stay in Bergen, Norway. Development of a provenance tracking visualization software.
 								</span>
-								<h2 class="worktitle">Mentor</h2>
-								<span class="worktime"> 07.2009 - 07.2014</span>
-								<span class="workcompany">Vienna Technical University</span>
+								<div class="workprojdescr mb-4">
+									<details open class="">
+										<summary class="yanone text-base">
+											<h3 class="inline-block pl-6">Diagnostic Storytelling (August 2014 - July 2015)</h3>
+										</summary>
+										<div>
+											<p class="projectsummary">
+												A project to create automatic reports of diagnostic sessions in hospitals.
+											</p>
+											
+											<p class="projecttext">
+												In this project I created a flexible web UI with <span class="techstack">HTML</span>, <span class="techstack">CSS</span> and 
+												<span class="techstack">JavaScript</span> where the <span class="techstack">OpenGL</span> volume rendering was done remotely by a prototyping framework named VolumeShop.
+												I extended this framework with a plugin to track the user interaction forwarded from the web UI, to save images of the OpenGL volume rendering, and store visualization settings 
+												and user notes in a tree. The tree was rendered on the web UI using <span class="techstack">D3</span>, and one could jump back to any point stored point during the session. At the end of the session, a presentation was
+												created using an own HTML template engine written in <span class="techstack">C++11</span>, and a HTML/JavaScript presentation library.
+											</p>
+										</div>
+									</details>
+								</div>
+							</div>
+						</section>	
+
+						<section id="workexperience2" class="pr-0 print:pr-4 lg:pr-4" >
+							<div class="workgrid">
+								<h2 class="worktitle print:pt-8">Mentor</h2>
+								<span class="worktime print:pt-8"> 07.2009 - 07.2014</span>
+								<span class="workcompany print:pt-8">Vienna Technical University</span>
 								<span class="workdescr mb-4">
 									Training and preparation for workshop leaders for the "Kinderuni",
 									using Lego Mindstorms NXT robots to teach kids programming. 1-2 month each summer.
@@ -245,7 +276,6 @@
 							<div class="flex justify-center print:hidden lg:hidden">
 								<hr />
 							</div>
-
 						</section>
 
 						<section id="skills" class="-order-1 print:order-1 lg:order-1">
@@ -302,11 +332,11 @@
 								</div>
 		
 		
-								<div class="flex col-span-2 lg:col-span-1 justify-center mt-6 print:mb-6 print:pt-24">
+								<div class="flex col-span-2 lg:col-span-1 justify-center mt-6 print:mb-6 print:pt-32">
 									<dl class="flex flex-col leading-4 justify-center lato">
-										<div><dt>(+):</dt><dd>good / current experience</dd></div>
+										<div><dt>(+):</dt><dd>good/current experience</dd></div>
 										<div><dt>(~):</dt><dd>some experience</dd></div>
-										<div><dt>(-):</dt><dd>little experience / long time ago</dd></div>
+										<div><dt>(-):</dt><dd>less experience/outdated</dd></div>
 									</dl>
 								</div>
 							</div>
@@ -326,7 +356,7 @@
 									<p class="ml-12 border-b print:text-sm">Vienna University of Technology</p>
 								</div>
 								<div class="print:pb-6">
-									<h2 class="border-b">Visualization Group (Erasmus - 1 Year)</h2>
+									<h2 class="border-b">Visualization Group</h2>
 									<p class="ml-12 border-b print:text-sm"> University of Bergen (Erasmus)</p>
 								</div>
 								<div class="print:pb-6">
@@ -346,12 +376,9 @@
 						</section>
 					</div>
 
-
-
-
 				<div class="pagebreak"></div>
 				
-				<div class="relative print:mt-44 2xl:-top-8">
+				<div class="relative 2xl:-top-8 print:mt-12">
 					<div class="flex justify-center mt-0">
 						<hr />
 					</div>
@@ -366,7 +393,7 @@
 					</div>
 				</div>
 
-				<div id="columnsContainer" class="px-4 lg:pr-6 2xl:pr-8 pb-8">
+				<div id="columnsContainer2" class="px-4 lg:pr-6 2xl:pr-8 pb-8">
 					<section id="interests" class="pr-0 lg:pr-4">
 						<h1>Interests</h1>
 						<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6 print:block">
@@ -402,52 +429,82 @@
 
 					<section id="ownprojects" class="-order-1 print:order-1 lg:order-1">
 						<h1>Private Projects</h1>
-						<div class="mb-6">
-							<details open>
-								<summary class="yanone">
-									<h2 class="inline-block pl-6 border-b-0"><a href="https://ylink.at">ylink.at</a></h2>
-								</summary>
-								<div>
-									<p class="projecttext border-t">
-										A privacy aware short link service having an API first approach,
-										and offering different link expiration options, as well as link
-										encryption and password protection.<br />
-										A companion npm package offers easy API integration into projects.
-									</p>
-								</div>
-							</details>
-						</div>
-						<div class="mb-6">
-							<details open>
-								<summary class="yanone text-base">
-									<h2 class="inline-block pl-6 border-b-0">
-										<a href="https://austrian-kiz.ylink.at/">
-											austrian-kiz.ylink.at
-										</a>
-									</h2>
-								</summary>
-								<div>
-									<p class="projecttext border-t">
-										A simple calendar tool showing the upcoming events in the Austrian
-										latin dance scene, as a help for organizers to find free event dates without
-										having to already publish an Facebook event.
-									</p>
-								</div>
-							</details>
-						</div>
-						<div>
-							<details open>
-								<summary class="yanone">
-									<h2 class="inline-block pl-6 border-b-0">Teamo</h2>
-								</summary>
-								<div>
-									<p class="projecttext border-t">
-										A web application for team management. The tool allows one to create teams out of a pool of
-										people, to keep track of the team members' availability, and their deployments to different events. 
-									</p>
-								</div>
-							</details>
-						</div>
+						
+						<details open class="mb-6">
+							<summary class="yanone">
+								<h2 class="inline-block pl-6 border-b-0"><a href="https://ylink.at">ylink.at</a></h2>
+							</summary>
+							<div>
+								<p class="projectsummary">
+									A privacy aware short link service having an API first approach,
+									and offering different link expiration options, as well as link
+									encryption and password protection.
+								</p>
+								<p class="projecttext">
+									Build with <span class="techstack">NextJS</span>, Tailwind, <span class="techstack">TRPC</span>, and a REST-API written in TypeScript.
+									As database I use a <span class="techstack">MySQL</span> database running on a DBaaS provider.
+									A first draft was done in <span class="techstack">SvelteKit</span> and offered Stripe integration.
+									<br />
+									A companion npm package offers easy API integration into projects.
+								</p>
+							</div>
+						</details>
+						
+						<details open class="mb-6">
+							<summary class="yanone text-base">
+								<h2 class="inline-block pl-6 border-b-0">
+									<a href="https://austrian-kiz.ylink.at/">
+										austrian-kiz.ylink.at
+									</a>
+								</h2>
+							</summary>
+							<div>
+								<p class="projectsummary">
+									A simple calendar tool showing the upcoming events in the Austrian
+									latin dance scene, as a help for organizers to find free event dates without
+									having to already publish an Facebook event.
+								</p>
+								<p class="projecttext">
+									A project also made with NextJS, and uses the Google Calendar API to interact with a Google calendar.
+								</p>
+							</div>
+						</details>
+						
+						<details open class="mb-6">
+							<summary class="yanone">
+								<h2 class="inline-block pl-6 border-b-0">Teamo</h2>
+							</summary>
+							<div>
+								<p class="projectsummary">
+									A web application for team management. The tool allows one to create teams out of a pool of
+									people, to keep track of the team members' availability, and their deployments to different events. 
+								</p>
+								<p class="projecttext">
+									Also this project is using TypeScript, NextJS, TRPC, and MySQL on a DBaaS provider. 
+								</p>
+							</div>
+						</details>
+						
+						<details open>
+							<summary class="yanone">
+								<h2 class="inline-block pl-6 border-b-0">Others</h2>
+							</summary>
+							<div>
+								<p class="projectsummary">
+									2015 - Simple Template Engine
+								</p>
+								<p class="projecttext">
+									A simple template engine written in C++11.
+								</p>
+								<p class="projectsummary">
+									2014 - QSSEngine
+								</p>
+								<p class="projecttext">
+									A prototype OpenGL game engine using Qt5 for the context and input, FBX model loading, and implementing basic effects like bump mapping, shadow mapping, a sky box, a GPU particle system, HDR rendering, tone mapping, and depth of field.
+								</p>
+							</div>
+						</details>
+						
 
 						<div class="flex lg:hidden print:hidden justify-center">
 							<hr />
@@ -468,5 +525,14 @@
 	<script defer>
 		// is there is JS disabled, we simply don't show the tips modal
 		document.getElementById("tipsmodal").setAttribute("open", "true");
+		// focus the button of the tips dialog to close it with enter
+		document.getElementById("tipsmodal_btn").focus();
+		// close the tips dialog using Escape
+		document.addEventListener("keyup", function (event) {
+			if (event.key === "Escape") {
+				document.getElementById("tipsmodal").removeAttribute("open");
+			}
+		});
+
 	</script>
 </html>
