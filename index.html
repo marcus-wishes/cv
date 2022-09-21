@@ -26,7 +26,7 @@
 			<a href="#interests">Interests</a>
 		</nav>
 
-		<dialog id="tipsmodal">
+		<dialog id="tipsmodal" class="print:hidden">
 			<div class="grid h-full justify-center items-center">			
 				<div class="pr-16 pl-12 pb-16 mt-16 max-w-md">
 					<p class="whitespace-nowrap font-bold text-lg"><span class="fa fa-info-circle"></span>&nbsp;&nbsp;Print styling is available.</p>
@@ -121,7 +121,7 @@
 				</div>
 
 				<div id="columnsContainer" class="px-4 lg:px-6 2xl:px-8">
-						<section id="workexperience" class="pr-0 print:pr-4 lg:pr-4 row-span-2">
+						<section id="workexperience" class="pr-0 print:pr-4 lg:pr-4">
 							<h1>Work Experience</h1>
 							<div class="workgrid">
 								<h2 class="worktitle">Research Engineer</h2>
@@ -144,7 +144,7 @@
 											</p>
 											<p class="projecttext">
 												I work on converting
-												the frontend from <span class="techstack">JavaScript</span> to 
+												the frontend from <span class="techstack">JavaScript</span> to
 												<span class="techstack">Typescript</span> and  <span class="techstack">React</span>
 												class components to functional components. We improved
 												upon the <span class="techstack">ThreeJS</span> 3D volume rendering, as well as on the 3D query
@@ -167,27 +167,27 @@
 											<h3 class="inline-block pl-6">BrainTrawler (March 2018 - February 2022)</h3>
 										</summary>
 										<div>
-											<p class="projectsummary print:mb-24">
+											<p class="projectsummary">
 												A visual analytics framework for neuroscientists to
 												iteratively explore heterogeneous big brain data, neural
 												circuit connectivity data, and (single cell) gene expression
 												data.
 											</p>
 											
-											<p class="projecttext">
+											<div class="projecttext">
 												I developed on the frontend using <span class="techstack">React</span>, <span class="techstack">Tailwind</span> with <span class="techstack">Flow</span> types, and
 												<span class="techstack">Redux</span> state management to improve rendering, user interaction,
 												and handling of large datasets, and I created a unique
 												workflow to explore gene expression data as a plugin component
 												for BrainTrawler, and further developed the <span class="techstack">Storybook</span> based
 												component libraries and <span class="techstack">Plotly</span>-based visualizations.
-												<br />
-												<br />
+											</div>
+											<div class="projecttext print:mt-24 print:pt-12">
 												In the backend I again created a custom data store in <span class="techstack">Go</span> to
 												efficiently map 3D coordinates to single cell sample metadata
 												and gene expression data, including vast filtering and
 												querying possibilities on the sample metadata.
-											</p>
+											</div>
 										</div>
 									</details>
 
@@ -249,9 +249,14 @@
 										</div>
 									</details>
 								</div>
-								<h2 class="worktitle">Mentor</h2>
-								<span class="worktime"> 07.2009 - 07.2014</span>
-								<span class="workcompany">Vienna Technical University</span>
+							</div>
+						</section>	
+
+						<section id="workexperience2" class="pr-0 print:pr-4 lg:pr-4" >
+							<div class="workgrid">
+								<h2 class="worktitle print:pt-8">Mentor</h2>
+								<span class="worktime print:pt-8"> 07.2009 - 07.2014</span>
+								<span class="workcompany print:pt-8">Vienna Technical University</span>
 								<span class="workdescr mb-4">
 									Training and preparation for workshop leaders for the "Kinderuni",
 									using Lego Mindstorms NXT robots to teach kids programming. 1-2 month each summer.
@@ -268,7 +273,6 @@
 							<div class="flex justify-center print:hidden lg:hidden">
 								<hr />
 							</div>
-
 						</section>
 
 						<section id="skills" class="-order-1 print:order-1 lg:order-1">
@@ -325,11 +329,11 @@
 								</div>
 		
 		
-								<div class="flex col-span-2 lg:col-span-1 justify-center mt-6 print:mb-6 print:pt-24">
+								<div class="flex col-span-2 lg:col-span-1 justify-center mt-6 print:mb-6 print:pt-32">
 									<dl class="flex flex-col leading-4 justify-center lato">
-										<div><dt>(+):</dt><dd>good / current experience</dd></div>
+										<div><dt>(+):</dt><dd>good/current experience</dd></div>
 										<div><dt>(~):</dt><dd>some experience</dd></div>
-										<div><dt>(-):</dt><dd>little experience / long time ago</dd></div>
+										<div><dt>(-):</dt><dd>less experience/outdated</dd></div>
 									</dl>
 								</div>
 							</div>
@@ -349,7 +353,7 @@
 									<p class="ml-12 border-b print:text-sm">Vienna University of Technology</p>
 								</div>
 								<div class="print:pb-6">
-									<h2 class="border-b">Visualization Group (Erasmus - 1 Year)</h2>
+									<h2 class="border-b">Visualization Group</h2>
 									<p class="ml-12 border-b print:text-sm"> University of Bergen (Erasmus)</p>
 								</div>
 								<div class="print:pb-6">
@@ -369,12 +373,9 @@
 						</section>
 					</div>
 
-
-
-
 				<div class="pagebreak"></div>
 				
-				<div class="relative print:mt-44 2xl:-top-8">
+				<div class="relative 2xl:-top-8 print:mt-36">
 					<div class="flex justify-center mt-0">
 						<hr />
 					</div>
@@ -389,7 +390,7 @@
 					</div>
 				</div>
 
-				<div id="columnsContainer" class="px-4 lg:pr-6 2xl:pr-8 pb-8">
+				<div id="columnsContainer2" class="px-4 lg:pr-6 2xl:pr-8 pb-8">
 					<section id="interests" class="pr-0 lg:pr-4">
 						<h1>Interests</h1>
 						<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6 print:block">
@@ -450,6 +451,7 @@
 									</h2>
 								</summary>
 								<div>
+									
 									<p class="projecttext border-t">
 										A simple calendar tool showing the upcoming events in the Austrian
 										latin dance scene, as a help for organizers to find free event dates without

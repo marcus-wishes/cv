@@ -14,7 +14,7 @@
 
 @page {
 	size: A4;
-	margin: 0.5rem 1.5rem;
+	margin: 0.0rem 0.0rem;
 }
 
 html { 
@@ -26,14 +26,27 @@ html {
 	grid-template-columns: auto;
 }
 
+#columnsContainer2 {
+	@apply grid;
+	grid-template-columns: auto;
+}
+
 @media print {
 	#columnsContainer {
-		grid-template-columns: auto auto;
+		grid-template-columns:2.7fr 1fr;
+	}
+
+	#columnsContainer2 {
+		grid-template-columns: 1fr 2.7fr;
 	}
 }
 
 @media (min-width: 1024px) { /* lg */
 	#columnsContainer {
+		grid-template-columns: auto auto;
+	}
+
+	#columnsContainer2 {
 		grid-template-columns: auto auto;
 	}
 }
@@ -169,6 +182,109 @@ details div {
 	border-color: var(--accent-color);
 }
 
+.techstack {
+	@apply text-base font-bold;
+	color: var(--accent-color);
+}
+
+@media print {
+	.projecttext {
+		@apply text-xs;
+	}
+
+	.projectprivate {
+		@apply text-sm;
+	}
+
+	.techstack {
+		@apply text-sm;
+	}
+}
+
+#workexperience {
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+
+#workexperience2 {
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+
+#skills {
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+
+#education {
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+
+@media (min-width: 768px) { /* md */
+	#workexperience {
+		grid-row-start: 2;
+		grid-row-end: 3;
+	}
+	#workexperience2 {
+		grid-column-start: 1;
+		grid-column-end: 3;
+		grid-row-start: 3;
+		grid-row-end: 4;
+	}
+}
+
+@media (min-width: 1024px) { /* lg */
+	#workexperience {
+		grid-row-start: 1;
+		grid-row-end: 3;
+	}
+	#workexperience2 {
+		grid-column-start: 1;
+		grid-column-end: 2;
+	}
+
+	#skills {
+		grid-column-start: 2;
+		grid-column-end: 3;
+	}
+
+	#education {
+		grid-column-start: 2;
+		grid-column-end: 3;
+		grid-row-start: 2;
+		grid-row-end: 3;
+	}
+}
+
+@media print {
+	#skills {
+		grid-row-start: 1;
+		grid-row-end: 2;
+		grid-column-start: 2;
+		grid-column-end: 3;
+	}
+
+	#education {
+		grid-row-start: 2;
+		grid-row-end: 3;
+		grid-column-start: 2;
+		grid-column-end: 3;
+	}
+
+	#workexperience {
+		grid-row-start: 1;
+		grid-row-end: 4;
+	}
+
+	#workexperience2 {
+		grid-column-start: 1;
+		grid-column-end: 3;
+	}
+}
+
+
+
 dt {
 	@apply font-bold text-xs inline-block mr-2;
 }
@@ -236,10 +352,6 @@ dd {
 	}
 }
 
-.techstack {
-	@apply text-base font-bold;
-	color: var(--accent-color);
-}
 
 /* Section Menu */
 #sectionmenu {
