@@ -143,20 +143,21 @@
 												An extension and continuation of the Larvalbrain project.
 											</p>
 											<p class="projecttext">
-												I worked on an overhaul of the basic architecture, converting
-												the frontend from JavaScript to Typescript and class
-												components to functional component with hooks. We improved
-												upon the 3D volume rendering, as well as on the 3D query
-												spatial query possibilities with heavy performance
-												improvements, and adding more query possibilities. Also the
-												state management got modernized to Redux Toolkit, and we
-												vastly improved the Storybook based in house component
-												libraries, adding several new visualizations using Plotly.
+												I work on converting
+												the frontend from <span class="techstack">JavaScript</span> to 
+												<span class="techstack">Typescript</span> and  <span class="techstack">React</span>
+												class components to functional components. We improved
+												upon the <span class="techstack">ThreeJS</span> 3D volume rendering, as well as on the 3D query
+												spatial query possibilities. The
+												state management was modernized to <span class="techstack">Redux Toolkit</span>, communication with the backend with <span class="techstack">React-Query</span>, and we
+												added several components, new <span class="techstack">Plotly</span> based visualizations, and interactive documentation to the <span class="techstack">Storybook</span> based in-house component
+												libraries.
 												<br />
 												<br />
 												In the backend, I am working on performance and data storage
-												improvements of our custom 3D spatial data store, and the
-												communication between the different micro services.
+												improvements of our custom 3D spatial data store in <span class="techstack">Go</span>, data retrieval using <span class="techstack">SQLC</span> 
+												from a <span class="techstack">PostgreSQL</span>, and the
+												communication between the different <span class="techstack">Docker</span> microservices.
 											</p>
 										</div>
 									</details>
@@ -169,23 +170,23 @@
 											<p class="projectsummary print:mb-24">
 												A visual analytics framework for neuroscientists to
 												iteratively explore heterogeneous big brain data, neural
-												circuit connectivity data and (single cell) gene expression
+												circuit connectivity data, and (single cell) gene expression
 												data.
 											</p>
 											
 											<p class="projecttext">
-												I developed on the frontend using React with Flow types and
-												Redux state management to improve rendering, user interaction
+												I developed on the frontend using <span class="techstack">React</span>, <span class="techstack">Tailwind</span> with <span class="techstack">Flow</span> types, and
+												<span class="techstack">Redux</span> state management to improve rendering, user interaction,
 												and handling of large datasets, and I created a unique
 												workflow to explore gene expression data as a plugin component
-												for BrainTrawler, and further developed the Storybook based
-												component libraries.
+												for BrainTrawler, and further developed the <span class="techstack">Storybook</span> based
+												component libraries and <span class="techstack">Plotly</span>-based visualizations.
 												<br />
 												<br />
-												In the backend I again created a custom data store to
-												efficiently map 3D coordinates to single cell sample meta data
+												In the backend I again created a custom data store in <span class="techstack">Go</span> to
+												efficiently map 3D coordinates to single cell sample metadata
 												and gene expression data, including vast filtering and
-												querying possibilities on the sample meta data.
+												querying possibilities on the sample metadata.
 											</p>
 										</div>
 									</details>
@@ -201,19 +202,23 @@
 												the Drosophila melanogaster larvae.
 											</p>
 											<p class="projecttext">
+												I worked with <span class="techstack">JavaScript</span> and <span class="techstack">React</span> on the frontend, including 
+												<span class="techstack">ThreeJS</span> volume and canvas slice rendering of microscopy images, on the
+												spatial querying methods for the volumetric data, and the communication with the backend. 
 												
-												In the web frontend, I worked with JavaScript and React on the
-												volume and slice rendering of the microscopy images, on the
-												spatial querying methods for the volumetric data, and the
-												communication with the backend. I also established the use of
-												Storybook based component libraries.
+												on a custom spatial data store written in <span class="techstack">Go</span>, and the
+												communication with the Go <span class="techstack">REST-API</span> backend. I also established the use of
+												<span class="techstack">Storybook</span>-based component libraries.
 												<br />
 												<br />
-												The backend was written in Go/Java, and included different
-												services, like a REST API, an image processing service, or a
-												volumetric data mining service. My main focus of work in the
-												backend was a custom data store to efficiently query 3D
-												volumetric data.
+												My work in the backend included the REST-API and a task scheduler and runner in <span class="techstack">Go</span>, 
+												and different microservices, like a GO/<span class="techstack">Java</span> image processing service. My main focus of work in the
+												backend was a custom data store to efficiently  query and data mine 3D
+												volumetric data in Go.
+												<br />
+												<br />
+												My work also involved development of a desktop tool tracking the registration progress and preview of confocal microscopy images 
+												in an SQLite database using <span class="techstack">C++11</span> and <span class="techstack">Qt5</span>.	
 											</p>
 									</details>
 								</div>
@@ -221,10 +226,29 @@
 								<h2 class="worktitle mt-4 xl:mt-8">Researcher</h2>
 								<span class="worktime mt-4 xl:mt-8">08.2014 - 07.2015</span>
 								<span class="workcompany mt-4 xl:mt-8">University of Bergen</span>
-								<span class="workdescr mb-4">
-									Research stay in Bergen, Norway. Development of a history tracking visualization software using C++,
-									OpenGL, JavaScript and D3.
+								<span class="workdescr">
+									Research stay in Bergen, Norway. Development of a provenance tracking visualization software.
 								</span>
+								<div class="workprojdescr mb-4">
+									<details open class="">
+										<summary class="yanone text-base">
+											<h3 class="inline-block pl-6">Diagnostic Storytelling (August 2014 - July 2015)</h3>
+										</summary>
+										<div>
+											<p class="projectsummary">
+												A project to create automatic reports of diagnostic sessions in hospitals.
+											</p>
+											
+											<p class="projecttext">
+												In this project I created a flexible web UI with <span class="techstack">HTML</span>, <span class="techstack">CSS</span> and 
+												<span class="techstack">JavaScript</span> where the <span class="techstack">OpenGL</span> volume rendering was done remotely by a prototyping framework named VolumeShop.
+												I extended this framework with a plugin to track the user interaction forwarded from the web UI, to save images of the OpenGL volume rendering, and store visualization settings 
+												and user notes in a tree. The tree was rendered on the web UI using <span class="techstack">D3</span>, and one could jump back to any point stored point during the session. At the end of the session, a presentation was
+												created using an own HTML template engine written in <span class="techstack">C++11</span>, and a HTML/JavaScript presentation library.
+											</p>
+										</div>
+									</details>
+								</div>
 								<h2 class="worktitle">Mentor</h2>
 								<span class="worktime"> 07.2009 - 07.2014</span>
 								<span class="workcompany">Vienna Technical University</span>

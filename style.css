@@ -38,6 +38,7 @@ html {
 	}
 }
 
+
 /* Fonts */
 .yanone {
 	font-family: "Yanone Kaffeesatz";
@@ -235,6 +236,10 @@ dd {
 	}
 }
 
+.techstack {
+	@apply text-base font-bold;
+	color: var(--accent-color);
+}
 
 /* Section Menu */
 #sectionmenu {
